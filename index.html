@@ -1,0 +1,331 @@
+home.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cart-shopping-solid.svg" type="image/x-icon">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+
+        .navbar-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px -5px 15px rgb(68, 68, 68);
+            position: fixed;
+        }
+
+        .brand-name {
+            margin: 1rem;
+            padding: 0.5rem;
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            font-weight: bold;
+            color: brown;
+        }
+
+        .navigations {
+            display: flex;
+            list-style: none;
+            align-content: center;
+        }
+
+        .nav-link {
+            padding: 1.5rem;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2rem;
+            color: black;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(209, 209, 209, 0.671);
+        }
+    </style>
+    <style>
+        .welcome-container {
+            height: 50vw;
+            background-image: url(https://images.unsplash.com/photo-1511300636408-a63a89df3482?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            /* filter: blur(5px); */
+            /* -webkit-filter: blur(5px); */
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome {
+            color: white;
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+
+        .slogan {
+            color: white;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    </style>
+    <style>
+        .categories-title {
+            margin: 10rem auto 5rem;
+            text-align: center;
+        }
+
+        .categories-title h2 {
+            font-size: 3rem;
+        }
+
+        .categories-grid {
+            margin: 2rem auto;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem 2rem;
+            max-width: 900px;
+        }
+
+        .category-box {
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 5px rgba(152, 152, 152, 0.455);
+            border: 1px solid rgba(152, 152, 152, 0.455);
+        }
+
+        .category-box img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+
+        .category-box h3 {
+            text-decoration: none;
+            color: black;
+            margin: 1rem 1rem;
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+    </style>
+    <style>
+        .review-title {
+            margin: 10rem auto 5rem;
+            text-align: center;
+        }
+
+        .review-title h2 {
+            font-size: 3rem;
+        }
+
+        .review-images {
+            margin: 5rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, 35vw);
+            gap: 1vw 5vw;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .home-description {
+            margin: auto auto;
+            font-size: 2rem;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            margin: auto 0px;
+        }
+
+        @media(min-width:1120px){
+            .review-images {
+                grid-template-rows: repeat(4,40rem);
+                gap: 1rem 5rem;
+            }
+        }
+    </style>
+    <style>
+        .contacts-title h2{
+            text-align: center;
+            font-size: 3rem;
+            margin: 10rem auto 5rem;
+        }
+
+        .contacts {
+            margin: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .rushabh,
+        .deepesh,
+        .aayush,
+        .damini{
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .rushabh h3,
+        .deepesh h3,
+        .aayush h3,
+        .damini h3 {
+            margin: 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .rushabh p,
+        .deepesh p,
+        .aayush p,
+        .damini p {
+            margin: 0.5rem;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        
+        .rushabh a,
+        .deepesh a,
+        .aayush a,
+        .damini a {
+            color: black;
+            margin: 1rem;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .rushabh a:hover,
+        .deepesh a:hover,
+        .aayush a:hover,
+        .damini a:hover {
+            color: rgb(33, 212, 95);
+        }
+
+        @media(max-width:900px){
+            .contacts{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <h2 class="brand-name">GO GOODY</h2>
+        <div class="navigations">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="policy.html" class="nav-link">Policy</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </div>
+    </div>
+    <div class="welcome-extra-container">
+        <div class="welcome-container">
+            <h1 class="welcome">Welcome to GO GOODY</h1>
+            <h2 class="slogan">Dil se, Dil tak</h2>
+        </div>
+    </div>
+    <div class="categories-container">
+        <div class="categories-title">
+            <h2>categories</h2>
+        </div>
+        <div class="categories-grid">
+            <a href="#" class="category-box">
+                <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="image">
+                <h3>Electronics</h3>
+            </a>
+            <a href="#" class="category-box">
+                <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="image">
+                <h3>Sports</h3>
+            </a>
+            <a href="#" class="category-box">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    alt="image">
+                <h3>Fashion</h3>
+            </a>
+            <a href="#" class="category-box">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1187&q=80"
+                    alt="image">
+                <h3>Cosmetics</h3>
+            </a>
+
+        </div>
+    </div>
+    <div class="reviews-container">
+        <div class="review-title">
+            <h2>Customer Reviews</h2>
+        </div>
+        <div class="review-images">
+            <img src="https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="image" class="image">
+            <p class="home-description">I love my Sony WH-1000XM4 headphones! The noise-cancellation is excellent, sound
+                quality is top-notch, and they're very
+                comfortable to wear. Battery life is impressive too. Highly recommend</p>
+            <p class="home-description">The Nike Air Zoom Pegasus 38 running shoes are fantastic! They're comfortable,
+                durable, and provide excellent support.
+                Highly recommend for runners!</p>
+            <img src="https://images.unsplash.com/photo-1526234577630-77b606b3421b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="image" class="image">
+            <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                alt="image" class="image">
+            <p class="home-description">The Lululemon Align leggings are amazing! They're so comfortable and stylish,
+                and the material is high-quality. Highly
+                recommend for anyone looking for great leggings!</p>
+            <p class="home-description">The Glossier Cloud Paint blush is amazing! It's lightweight, blends perfectly,
+                and has great color payoff. Highly
+                recommend for a natural-looking flush!</p>
+            <img src="https://images.unsplash.com/photo-1517241938558-898c3afe02c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                alt="image" class="image">
+        </div>
+    </div>
+    <div class="contacts-container">
+        <div class="contacts-title">
+            <h2>Contact devlopers</h2>
+        </div>
+        <div class="contacts">
+            <div class="rushabh">
+                <h3>Rushabh Patel</h3>
+                <p>A proactive and keen learner. Hardworking and team working person</p>
+                <a href="https://www.instagram.com/rushabh_7.js/">Instagram</a>
+                <a href="https://www.linkedin.com/in/rushabh-patel-passionate-discipline-graphic-designer/">LinkedIn</a>
+            </div>
+            <div class="deepesh">
+                <h3>Deepesh Yadav</h3>
+                <p>A proactive and keen learner. Hardworking and team working person</p>
+                <a href="https://www.instagram.com/deepesh9251/">Instagram</a>
+                <a href="https://www.linkedin.com/in/deepesh-yadav-855354261/">LinkedIn</a>
+            </div>
+            <div class="aayush">
+                <h3>Ayush Ranjan Jha</h3>
+                <p>A proactive and keen learner. Hardworking and team working person</p>
+                <a href="https://www.instagram.com/iayush.ranjan/">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="damini">
+                <h3>Damini</h3>
+                <p>A proactive and keen learner. Hardworking and team working person</p>
+                <a href="https://www.instagram.com/da.mini1472/">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
